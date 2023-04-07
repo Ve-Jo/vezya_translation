@@ -1,0 +1,253 @@
+{
+	"info": {
+		"name": "English",
+		"description": "The cool language"
+	},
+	"timeouts": {
+		"errors": {
+			"universal": "You have to wait `<cooldown>`",
+			"crime": "You still can't crime! You have to wait <cooldown>",
+			"respect": "You still can't pay respect! You have to wait <cooldown>"
+		},
+		"ready": {
+			"daily": "✔️ You can get /daily",
+			"daily_autocomplete": "You can claim your daily reward!",
+			"voting": "🍃 You can claim /bonus",
+			"crime": "🏦 You can crime /crime",
+			"work": "🖥️ You can work /work",
+			"earn": "🔮 You can claim reward from roles /earn",
+			"pay": "🏬 You can transfer /pay",
+			"rep": "🤝 Express the respect /rep"
+		},
+		"custom": "🕖 Custom timeout <cooldown>",
+		"votings": "🌷 Bonus for the voting <cooldown>",
+		"daily": "⏱ Daily bonus <cooldown>",
+		"crime": "📛 CRIME! <cooldown>",
+		"work": "📛 Prohibition of games <cooldown>",
+		"pay": "📛 Restrict transactions! <cooldown>",
+		"roles": "📛 Bonus from the roles taken! <cooldown>",
+		"rep": "👐 Charity! <cooldown>"
+	},
+	"settings": {
+		"private_server": "Private server",
+		"private_server_disabled": "` 🔒 ` Disabled for private server!"
+	},
+	"light": {
+		"no": "🌠 No Light subscription (/shop -> \"Premium\")",
+		"yes": "🌠 Light-subscription: <cooldown>",
+		"balance_limits": "📨 Global balance is limited. Withdraw money.",
+		"global_balance_lock": "You need a **Light** subscription for global balance transactions!",
+		"global_balance_withdraw_lock": "Withdrawals from the global balance are limited to users without a **Light** subscription.\nYou will be able to withdraw money again through <cooldown>"
+	},
+	"respect": {
+		"autocomplete": {
+			"user_select": "First, specify the user",
+			"rep_myself": "You can't send a reputation to yourself!",
+			"rep_less_that_one": "Your reputation is less than one",
+			"preview": "This user has <1> <server_rep>"
+		},
+		"errors": {
+			"no_reputation": "You don't have a single reputation."
+		},
+		"embed": {
+			"title": "Reputation transfer!",
+			"description": "You have successfully sent `1 👍🏼` to <user>",
+			"your_reputation_field": "Your reputation:",
+			"your_reputation_value": "```\n<1> <server_rep> (-1)```",
+			"your_reputation_value_transfered": "```\n<1> <server_rep> (+1)```",
+			"his_reputation_field": "His reputation:",
+			"his_reputation_value": "```\n<1> <server_rep> (+1)```",
+			"his_reputation_value_transfered": "```\n<1> <server_rep> (-1)```"
+		},
+		"notification": {
+			"title": "A reputation has been sent to you!",
+			"description": "You successfully received `1 👍🏼` from member <user> on <server>"
+		}
+	},
+	"uptime": {
+		"content": "All the information is in front of you!",
+		"embed": {
+			"title": "Current bot uptime",
+			"server": "Server: <server>",
+			"what_is_that_field": "What is that?",
+			"what_is_that_value": "Here you can get a detailed overview of the bot's basic information.",
+			"contacts_field": "Contacts",
+			"contacts_value": "[1. Support](<1>)\n[2. Invite](<2>)",
+			"shards_field": "Shards",
+			"shards_info": "```elixir\n<emoji> @<id> [👥 <servers> servers] [👨‍👩‍👦‍👦 <members> members] <here_mark>\n    - <ping> ms | <shard_uptime>```"
+		},
+		"embed_advanced": {
+			"title": "Current bot specifications",
+			"operating_system": "OS",
+			"processes": "Processes",
+			"cpu": "CPU information",
+			"ram": "RAM",
+			"no_data": "The data left through the \"-\" bot could not get because of incompatibility with the OS"
+		},
+		"graphs": {
+			"servers": "Servers (<1>)",
+			"members": "Members (<1>)"
+		}
+	},
+	"crime": {
+		"autocomplete": {
+			"user_select": "Select a user to view their money",
+			"user_balance": "This user have: <1> <server_money>",
+			"balance_requirement": "You need <1> <server_money> to crime",
+			"crime_success": "When success, you receive from <1> to <2> <server_money>",
+			"crime_fail": "When fail, you lost from <1> to <2> <server_money>"
+		},
+		"errors": {
+			"myself": "You can't crime yourself",
+			"user_no_money": "This user has no money!",
+			"not_enough_money": "You don't have enough cash to commit theft!\nYou need at least <1> money!\n\n* Want to rob with fewer requirements? Upgrade your security level!"
+		},
+		"embed": {
+			"title": "Crime!",
+			"description_fail": "You have failed to steal from this person and you have lost some of your money!",
+			"description_success": "You were successful in robbing this user and taking money from him!",
+			"balance_field": "Your balance:",
+			"balance_value": "```\n<1> <server_money> (-<2>)\n<3> <server_bank>\n<4> <server_rep>\nTotal: <5>```",
+			"balance_value_success": "```\n<1> <server_money> (+<2>)\n<3> <server_bank>\n<4> <server_rep>\nTotal: <5>```",
+			"received_value_success": "```\n+<1> <server_money>\n+2h 🏦```",
+			"losses_field": "Losses",
+			"losses_value": "```\n-<1> <server_money>\n-1 <server_rep>\n+1h 🏦```"
+		},
+		"notification": {
+			"title": "There was an attempt to rob you!",
+			"description": "You have been tried to rob, but <user> on the server `<server>` did not succeed :)",
+			"balance_value": "```\n<1> <server_money> (+<2>)```",
+			"received_field": "Received",
+			"received_value": "```\n+<1> <server_money>```",
+			"title_fail": "You were robbed!",
+			"description_fail": "Unfortunately, user <user> managed to rob you on the server <server>!",
+			"balance_value_fail": "```\n<1> <server_money> (-<2>)```",
+			"lost_field": "Lost",
+			"lost_value": "```\n-<1> <server_money>```"
+		}
+	},
+	"deposit": {
+		"autocomplete": {
+			"all": "Deposit all (<1> <server_money>)",
+			"half": "Deposit half (<1> <server_money>)",
+			"quarter": "Deposit a quarter (<1> <server_money>)",
+			"current": "Your bank: <1> <server_bank>"
+		},
+		"embed": {
+			"title": "Deposit!",
+			"description": "You successfully deposited `<1> <server_money>` to the bank. It's safe there and no one will steal your money :) <comission_warning> You get a bonus percentage if you pick up a daily reward!",
+			"money_field_title": "Money",
+			"money_field_value": "```\n<1> <server_money>```",
+			"transfered_field_title": "Deposited",
+			"transfered_field_value": "```\n<1> -> <server_bank>```",
+			"bank_field_title": "Bank",
+			"bank_field_value": "```\n<1> <server_bank>```",
+			"global_transfer": "You successfully deposited <1> <server_money> to your global balance. Now you can withdraw it on the other server"
+		},
+		"role_comission": "<role> demanded `<comission>%` commission `(Role balance: <1> <server_money>)`"
+	},
+	"withdraw": {
+		"autocomplete": {
+			"all": "Withdraw all (<1> <server_bank>)",
+			"half": "Withdraw half (<1> <server_bank>)",
+			"quarter": "Withdraw a quarter (<1> <server_bank>)",
+			"current": "Your money: <1> <server_money>"
+		},
+		"embed": {
+			"title": "Withdraw!",
+			"description": "You have successfully withdrawn `<1> <server_money>` back into your pocket.",
+			"transfered_field_title": "Withdrawn",
+			"transfered_field_value": "```\n<server_money> <- <1>```"
+		}
+	},
+	"balance": {
+		"embed": {
+			"title": "Balance!",
+			"description": "Here you can check your current balance",
+			"default_server": "Defaut server",
+			"main_server": "Stats",
+			"upgrades": "Upgrades",
+			"leaderboards": "World Leadership",
+			"timeouts": "Timeouts",
+			"footer": "To correct NaN numbers, we recommend using /fixme",
+			"another_user": "Here you can find out the current balance of the member"
+		},
+		"info": "<global_balance><workertext>```\n<rebirth<server_rebirth>><money> <server_money>\n<bank> <server_bank>\nTotal: <1>````<rep> <server_rep>` `<clevers> <server_clevers>` `<donate> <server_donate>`<roles_list>"
+	},
+	"upgrades": {
+		"no": "No upgrades",
+		"money_boost": {
+			"name": "Profit Enhancer",
+			"description": "Increases the earning of base currency on all games",
+			"preview": "<server_money-boost> Earnings <1>x"
+		},
+		"daily_boost": {
+			"name": "Increasing the Daily Reward",
+			"description": "Increases the daily bonus earnings",
+			"preview": "<server_daily-boost> Daily <1>x"
+		},
+		"daily_bank": {
+			"name": "Percent of the bank",
+			"description": "Increases your bank account by this percentage with a daily bonus",
+			"preview": "<server_bank-boost> Bonus percentage <1>%"
+		},
+		"security_level": {
+			"name": "Reduced chance of theft",
+			"description": "You will become harder to rob!",
+			"preview": "<server_security-level> Security <1>x"
+		},
+		"timeout_boost": {
+			"name": "Daily Reward Acceleration",
+			"description": "Allows you to pick up the daily bonus faster!",
+			"preview": "<server_timeout-boost> Decreased by <1> hours"
+		},
+		"lvlup_money_boost": {
+			"name": "Earnings enhancer for level up",
+			"description": "Increases earnings by leveling up",
+			"preview": "<server_lvlup-money-boost> Money for leveling <1>x"
+		},
+		"snake_boost": {
+			"name": "Clevers",
+			"description": "Increase the player's field in the game Snake, when there is not enough space"
+		}
+	},
+	"daily": {
+		"limit": "Limit",
+		"embed": {
+			"title": "Daily Bonus",
+			"description": "Successful receipt of a daily bonus!",
+			"balance_field_title": "Current balance:",
+			"daily_calendar_title": "Daily calendar",
+			"daily_calendar_value": "<daily_marks> <daily_multiplier>x"
+		},
+		"notification": {
+			"enable_text": "Enable notifications",
+			"already_enabled": "You will be notifed on the next daily bonus"
+		},
+		"bank_text": "<bank> <server_bank> (+<percentage>)\n",
+		"info": "```\n<money> <server_money> (+<1>)\n<bank_text><reputation> <server_rep> (+<2>)\n<donate> <server_donate> (+<3>)>\nTotal: <4>```\n**Timeout**\n```+<cooldown>h ⏱```"
+	},
+	"boosters": {
+		"thx": "🚀 <boostermultiplier>X <boosterauthor>\n To thanks the booster: /thx",
+		"locale_booster_5x": "+5X LOCAL\n<cooldown>",
+		"locale_booster_workers_2x": "AMPLIFICATION OF 2X FOR <1> TIMES"
+	},
+	"leaderboard": {
+		"server": "🌌 Your server in the #<i> place. Total <2> <server_money>"
+	},
+	"workers": {
+		"range": "<server_worker> <workerstatus> From <1> to <2>",
+		"no": "<server_worker> No worker!"
+	},
+	"other": {
+		"autocomplete_no_preview": "Preview is not available",
+		"none": "None"
+	},
+	"errors": {
+		"crime_lock": "You can't do this until 3 minutes have passed since the battle began!",
+		"less_money": "You have less money!",
+		"less_that_one": "This number is less than one",
+		"not_a_number": "This is not a number",
+		"no_user": "I didn't see a mention!\n\nExample: <example>"
+	}
+}
