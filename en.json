@@ -64,6 +64,118 @@
 			"description": "You successfully received `1 👍🏼` from member <user> on <server>"
 		}
 	},
+	"earn": {},
+	"add_role": {},
+	"remove_role": {},
+	"admin": {},
+	"benchmark": {},
+	"computer": {},
+	"discovery": {},
+	"donate_check": {},
+	"fixme": {},
+	"giveaway": {},
+	"gym": {},
+	"hobby": {},
+	"home": {},
+	"level": {},
+	"marriage": {},
+	"pay_role": {},
+	"pay": {},
+	"play_invite": {},
+	"profile": {},
+	"ride": {},
+	"settings": {},
+	"shop": {},
+	"sleep_little": {},
+	"sleep": {},
+	"support": {},
+	"thx": {},
+	"timeout": {},
+	"visible": {},
+	"walk_pet": {},
+	"walk_together": {},
+	"walk": {},
+	"wallpaper": {},
+	"wipe": {},
+	"work": {},
+	"help": {
+		"selector": {
+			"placeholder": "Select the help category",
+			"one": "Balance management",
+			"one_description": "The most essential commands for your balance",
+			"two": "Ranking System and Profile",
+			"two_description": "Commands for getting your level and setting your current profile",
+			"three": "Store and Your Home",
+			"three_description": "Upgrade and improve your home",
+			"four": "Other",
+			"four_description": "Other teams you might also like",
+			"five": "Server Management",
+			"five_description": "Commands for server creators who want to configure everything for yourself!"
+		},
+		"embed": {
+			"title": "Help",
+			"footer": "Opening the help command",
+			"description": "Welcome to the help! Here you can find out all the available bot commands.\n\nChoose a category from the `drop list` below.\n`<>` - Mandatory argument\n`[]` - Optional argument",
+			"server_control": {
+				"viewing_data_field": "Viewing members data",
+				"viewing_data_value": "`/admin list` - View the data of all members of the server!\n * It is possible to specify another database by writing an additional argument!",
+				"user_data_field": "User data management",
+				"user_data_value": "`NOTE!` To be able to manage member data, the parameter `Private server` must be enabled!\n * You can find more information in /private-server\n\n`/admin [key] [value]` - Setting the value for the member:\nEXAMPLE:\n- The `/admin list` command outputs all data like this:```elixir\n${interaction.user.id}-xp = 10\n\n# Your KEY is \"${interaction.user.id}-xp\"\n# KEY value - 10\n# If you see the prefix \"-xp\", we can guess that it is a EXPERIENCE (If there is no prefix, it is cash!) \n# Since you own the user ID, this value is all yours! \n# If you want to change this value, type: /admin ${interaction.user.id}-xp 200\n# This sets your experience to 200. Turn on developer mode in Preferences -> Advanced and then click on the desired member.```"
+			}
+		}
+	},
+	"bonus": {
+		"image": {
+			"errors": {
+				"not_a_link": "This is not a link to the image"
+			},
+			"button_confirm": "Confirm",
+			"message_content": "Are you sure you want to send this image for consideration? \nBecause for the false image (sent for fun) you can get blocked from using the bot!\n\n**If you do not know what image to attach - call the command WITHOUT filling parameters!**",
+			"sended": "Image was sent"
+		},
+		"embed": {
+			"title": "Bonus for voting",
+			"description": "In this command you can learn how to earn donat-currency for free",
+			"welcome_field": "Welcome!",
+			"welcome_value": "Switch between the buttons to find out more details\nVoting on each of the sites will bring you `+<1> <server_donate>`",
+			"choose_site_btn": "Choose a site to get a link",
+			"how_to_get_field": "How do I get donate currency?",
+			"how_to_get_value": "`1.` Go to the website.\n`2.` Log in via your discord, if you need to do so\n`3.` Click on `Rate` or `Vote` button\n`4.` Take a screenshot of what you did (preferably with the current time displayed)\n`5.` Submit a screenshot using this slash command parameter\n`6.` Wait for verification and get `+<1> <server_donate>` per vote :)\n* You can also write a comment of your own, it would be my pleasure!",
+			"button_go_to_site": "Go to the site",
+			"donate_currency_field": "Donate currency",
+			"donate_currency_value": "`<1> <server_donate>`",
+			"total_votes_footer": "The total number of votes: <1>"
+		}
+	},
+	"invite": {
+		"embed": {
+			"title": "Invitation to the server",
+			"description": "Hi! You can invite the bot by clicking [here](<1>)",
+			"bugs_field": "Bugs and development",
+			"bugs_value": "- We sincerely ask you to report any bugs you encounter on our [support server](<1>)",
+			"footer": "Bot development"
+		}
+	},
+	"math": {
+		"errors": {
+			"calc_error": "Error in solving an example",
+			"calc_nan": "Something... But definitely not a number!",
+			"calc_infinity": "A number beyond our comprehension. Infinity.",
+			"calc_div_by_zero": "Division by zero is not possible."
+		},
+		"embed": {
+			"title": "Calculator",
+			"description": "Solve simple examples with this command",
+			"example_field": "Your example",
+			"example_value": "```fix\n<1>```",
+			"answer_field": "Answer",
+			"answer_value": "```fix\n<1>```",
+			"error_field": "Why did this happen?",
+			"error_value": "It is most likely that you specified the wrong example which may have letters or invalid characters. As a rule, the reason for the error is written in the solution itself.",
+			"error_floating_field": "The answer has a floating point problem!",
+			"error_floating_value": "We displayed it anyway, just like a normal calculator. Keep that in mind!"
+		}
+	},
 	"uptime": {
 		"content": "All the information is in front of you!",
 		"embed": {
@@ -172,6 +284,8 @@
 			"footer": "To correct NaN numbers, we recommend using /fixme",
 			"another_user": "Here you can find out the current balance of the member"
 		},
+		"server_leaderboard": "🌌 Your server in the #<i> place. Total <2> <server_money>",
+		"roles_list": "<role> -> `<1> <server_money>`",
 		"info": "<global_balance><workertext>```\n<rebirth<server_rebirth>><money> <server_money>\n<bank> <server_bank>\nTotal: <1>````<rep> <server_rep>` `<clevers> <server_clevers>` `<donate> <server_donate>`<roles_list>"
 	},
 	"upgrades": {
@@ -231,9 +345,6 @@
 		"thx": "🚀 <boostermultiplier>X <boosterauthor>\n To thanks the booster: /thx",
 		"locale_booster_5x": "+5X LOCAL\n<cooldown>",
 		"locale_booster_workers_2x": "AMPLIFICATION OF 2X FOR <1> TIMES"
-	},
-	"leaderboard": {
-		"server": "🌌 Your server in the #<i> place. Total <2> <server_money>"
 	},
 	"workers": {
 		"range": "<server_worker> <workerstatus> From <1> to <2>",
