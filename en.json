@@ -6,8 +6,8 @@
 	"timeouts": {
 		"errors": {
 			"universal": "You have to wait `<cooldown>`",
-			"crime": "You still can't crime! You have to wait <cooldown>",
-			"respect": "You still can't pay respect! You have to wait <cooldown>"
+			"crime": "You still can't crime! You have to wait `<cooldown>`",
+			"respect": "You still can't pay respect! You have to wait `<cooldown>`"
 		},
 		"ready": {
 			"daily": "✔️ You can get /daily",
@@ -84,12 +84,32 @@
 	"play_invite": {},
 	"profile": {},
 	"ride": {},
-	"settings": {},
 	"shop": {},
 	"sleep_little": {},
 	"sleep": {},
 	"support": {},
-	"thx": {},
+	"thx": {
+		"errors": {
+			"private_server": "You can't thank for the global booster anymore because of the private server!",
+			"no_booster": "Unfortunately. There is no booster in effect right now.",
+			"thx_myself": "You can't do that",
+			"less_zero_five": "Your reputation is less than 0.5"
+		},
+		"embed": {
+			"title": "Reputation transfer!",
+			"description": "You successfully thanked the booster by sending `<1> <server_rep>` to member <user>!",
+			"your_reputation_field": "Your reputation:",
+			"your_reputation_value": "```<1> <server_rep> (-<2>)\nBonus: <3> <server_money> (+<4>)```",
+			"his_reputation_field": "His reputation:",
+			"his_reputation_value": "```<1> <server_rep> (+<2>)```"
+		},
+		"notification": {
+			"title": "You got reputation for the booster!",
+			"description": "You received `<1> <server_rep>` from member `<user>` on server `<server>`",
+			"your_reputation_value": "```<1> <server_rep> (+<2>)```",
+			"his_reputation_value": "```<1> <server_rep> (-<2>)```"
+		}
+	},
 	"timeout": {},
 	"visible": {},
 	"walk_pet": {},
