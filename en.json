@@ -110,7 +110,35 @@
 			"his_reputation_value": "```<1> <server_rep> (-<2>)```"
 		}
 	},
-	"timeout": {},
+	"timeout": {
+        "changing": {
+            "embed": {
+                "title": "Parameter change!",
+                "on": "Successfully set to `On`",
+                "off": "Successfully set to `Off`"
+            }
+        },
+        "always": {
+            "embed": {
+                "title": "Always notify when timeouts are over",
+                "description": "By changing this parameter, you can make the bot always notify you about the end of all your timeouts!"
+            }
+        },
+        "games": {
+            "embed": {
+                "title": "Notify you of requests to play together",
+                "description": "By changing this parameter, you can make the bot notify you when someone decided to send a request to play together!"
+            }
+        },
+        "custom": {
+            "error": "Error in setting your own timer",
+            "title": "Setting timeouts",
+            "description": "With this command you can set your own reminder so that you do not forget anything!",
+            "set_field": "Timeout has been successfully set!",
+            "set_value": "The timeout was successfully set to `<time>`"
+        },
+        "no_args": "Wrong argument! Available arguments: `always`, `game`, `custom`"
+    },
 	"visible": {},
 	"walk_pet": {},
 	"walk_together": {},
