@@ -148,9 +148,23 @@
 			"label": "New value"
 		}
 	},
-	"remove_role": {},
+	"remove_role": {
+		"erors": {
+			"no_role": "There was an error of getting the role from shop! Make sure that the role is exists on server and you specified the correct ID",
+			"no_id": "You forgot to specity the ID role from the shop",
+			"weird_id": "The specified argument must be a ID from the shop and not containts something else"
+		},
+		"succesed": "Your role was successfully deleted from shop"
+	},
 	"admin": {},
-	"benchmark": {},
+	"benchmark": {
+		"embed": {
+			"title": "Measuring database speed",
+			"description": "With this command you can find out the speed of change of data in some databases",
+			"field_title": "Benchmarking",
+			"field_value": "For each database, we added a fake user key on your server with the value \"test\" and then removed that key and measured the speed.\n\nThe speed of the main database (economy): `<economy>ms` \nThe speed of timeout processing: `<timeout>ms`\nThe speed of the house database: `<home>ms`\nSpeed of getting profiles: `<profile>ms`\nSettings speed: `<settings>ms`\nThe speed of the fisherman simulator: `<fisher>ms`\nSpeed of records: `<records>ms`\nThe speed to buy upgrades: `<upgrades>ms`\nSpeed of setting custom roles: `<settings>ms`\nPremium database speed: `<premium>ms`\nRpg clicker speed: `<rpg>ms`\nThe speed of the mining simulator: `<mining>ms`\nThe speed of account term database: `<account_updates>ms`\nHomeless simulator speed: `<bomz>ms`\n\nTotal: `<total>ms`"
+		}
+	},
 	"computer": {},
 	"discovery": {},
 	"donate_check": {},
@@ -159,7 +173,44 @@
 	"gym": {},
 	"hobby": {},
 	"home": {},
-	"level": {},
+	"level": {
+		"autocomplete": {
+			"voice_no_data": "No data",
+			"preview": {
+				"level": "🏡 Level: <level> (<xp> / <required_xp>)",
+				"total_xp": "🌠 Total XP: <total_xp>",
+				"voice": "🔊 Voice activity: <voice>",
+				"home_level": "🏡 Home level: <home_level> (<home_xp> / <home_xp_required>)",
+				"home_total": "🏡 Total home XP: <home_total_xp>"
+			}
+		},
+		"errors": {
+			"ranking_disabled": "The rank system has been disabled by the creator of the server!"
+		},
+		"embed": {
+			"title": "Your level",
+			"description": "Here you can see the current level and how much XP has been earned!",
+			"your_level_title": "Your level",
+			"your_level_value": "```\n🏡 <current_level> level\n🌇 <current_xp> XP\n🌠 Total: <total_xp>\n🔊 Voice activity: <voice>```",
+			"next_level_title": "For the next level:",
+			"next_level_value": "```\n<rep_reward> <server_rep>\n<money_reward> <server_money>\n<house_reward> <server_house>```",
+			"leaderboard_title": "Your positions",
+			"leaderboard_value": "```🌐 #<pos> in word```",
+			"roles": {
+				"no_roles_title": "There is no roles for a level!",
+				"no_roles_value": "The creator of the server did not set the issuance of roles for levels. Maybe... ask him to do it?",
+				"leveled_roles_title": "All available roles for levels:",
+				"voice_roles_title": "Все доступные роли за голос. активность:",
+				"got_it": "**Received!**",
+				"lvlroles_foreach": "\n<role> -> `<level><to> level` <got_it_text>",
+				"voiceroles_foreach": "\n<role> -> `<level><to> minutes` <got_it_text>"
+			},
+			"wallpaper_title": "Do you want to set your own wallpaper?",
+			"wallpaper_value": "Use the command <command> `<lvl_requirement>+ LVL`"
+		},
+		"compact_mode": "`Total: <total_xp>xp` `🔊 <voice>` `🌐 #<pos>`",
+		"start_error": "Error opening level information. The bot probably can't process the installed cover art!\n\nChange it, or add it as an attachment instead of a link!"
+	},
 	"marriage": {},
 	"pay_role": {},
 	"pay": {},
@@ -485,6 +536,7 @@
 		"none": "None"
 	},
 	"errors": {
+		"not_open_yet": "Not open yet!",
 		"no_roles": "The bot could not get information about your roles. Most likely, the bot does not have the necessary rights, or some of them do not have the text.\nIf there was a misunderstanding, contact the support server",
 		"doesnt_see_role": "The bot doesn't see this role",
 		"not_an_admin": "You cannot use this command because you do not have `administrator` rights.",
