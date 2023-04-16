@@ -51,7 +51,7 @@
 		},
 		"embed": {
 			"title": "Reputation transfer!",
-			"description": "You have successfully sent `1 👍🏼` to <user>",
+			"description": "You have successfully sent `<1> 👍🏼` to <user>",
 			"your_reputation_field": "Your reputation:",
 			"your_reputation_value": "```\n<1> <server_rep> (-1)```",
 			"your_reputation_value_transfered": "```\n<1> <server_rep> (+1)```",
@@ -61,11 +61,93 @@
 		},
 		"notification": {
 			"title": "A reputation has been sent to you!",
-			"description": "You successfully received `1 👍🏼` from member <user> on <server>"
+			"description": "You successfully received `<1> 👍🏼` from member <user> on <server>"
 		}
 	},
-	"earn": {},
-	"add_role": {},
+	"earn": {
+		"no_role": "You don't have a single role with a profit, or you haven't earned anything. Buy them in the role store",
+		"embed": {
+			"title": "Profit from roles",
+			"descrtiption": "You earned income from the following roles:"
+		},
+		"each_role_description": "<role> -> `+<1> <server_money>` `(Total: <2>)`\n"
+	},
+	"add_role": {
+		"role_types": {
+			"one": {
+				"name": "(1/6) Purchased role",
+				"description": "Members who buy this role get it forever."
+			},
+			"two": {
+				"name": "(2/6) Role for level",
+				"description": "The role is added by user level."
+			},
+			"three": {
+				"name": "(3/6) Purchased definite-time role",
+				"description": "An improved version of the purchased role with a timer."
+			},
+			"four": {
+				"name": "(4/6) Purchased Personal Role",
+				"description": "Your own role for everyone with customization of its name and color!"
+			},
+			"five": {
+				"name": "(5/6) Voice Activity Role",
+				"description": "Role for voice activity"
+			},
+			"six": {
+				"name": "(6/6) Role with Profit",
+				"description": "Income-generating role"
+			}
+		},
+		"embed": {
+			"title": "Personal Role Shop",
+			"description": "You`re creating a role that everyone in the role store can buy!",
+			"preview_field": "Role preview",
+			"no_preview": "No preview, select type of role",
+			"no_description": "No description",
+			"type_one": "<role>```\n\"<description>\"\n# Price: <1><server_money>```",
+			"delete_text": "to <delete_level>",
+			"type_two": "<role> -> `from <level><delete_text> level`",
+			"type_three": "<role>```\n\"<description>\"\n# Price <1><server_money> (<length> minutes)```",
+			"type_four": "```Create your own personal role!\n<1><server_money> (<length> minutes)```",
+			"type_five": "<role> -> `from <voice><delete_text> minutes`",
+			"type_six": "<role>```\n\"<description>\"\nComission: <comission>%\nEarning: <earning>% from role balance\n# Price: <1><server_money>```"
+		},
+		"select_menu": {
+			"title": "Select award type",
+			"select_role": "Choose a role (<total>)"
+		},
+		"buttons": {
+			"no_delete": "Don't delete",
+			"time": "minutes",
+			"voice_time": "Time required: <1> <time>",
+			"voice_time_max": "Remove the role on: <1>",
+			"level": "Required level: <1>",
+			"level_max": "Delete a role on a level: <1>",
+			"price": "Price: <1> <server_money>",
+			"timed_role": "Role time: <1> <time>",
+			"role_description": "Set up a description",
+			"earning_role_one": "Commission from earnings: <1>%",
+			"earning_role_two": "Profit from overall role balance: <1>%",
+			"create_role": "Create a role! <warnings>"
+		},
+		"errors": {
+			"lvl_less_two": "Level <1> at least!",
+			"time_less_one": "Time is at least <1> minute!",
+			"delete_level_below_receiving": "This level cannot be lower than the receiving level!",
+			"delete_voice_level_below_receiving": "The time must be longer than required",
+			"activity_below_": "You can't create more than <1> rewards for activity on one server!",
+			"purchased_below_": "You cannot create more than <1> purchased roles per server.",
+			"leveled_below": "You cannot create more than <1> level roles per server.",
+			"role_with_profit_only": "This role is already created as a \"Role with profit\" and cannot be created simultaneously in different categories!",
+			"role_another_type": "This role is already created with another type, it would break the role.",
+			"roles_comission_limit": "All of your profit roles have exceeded the <1>% commission limit."
+		},
+		"modal": {
+			"title": "Set the new value",
+			"label": "New value"
+		}
+	},
 	"remove_role": {},
 	"admin": {},
 	"benchmark": {},
@@ -111,34 +193,34 @@
 		}
 	},
 	"timeout": {
-        "changing": {
-            "embed": {
-                "title": "Parameter change!",
-                "on": "Successfully set to `On`",
-                "off": "Successfully set to `Off`"
-            }
-        },
-        "always": {
-            "embed": {
-                "title": "Always notify when timeouts are over",
-                "description": "By changing this parameter, you can make the bot always notify you about the end of all your timeouts!"
-            }
-        },
-        "games": {
-            "embed": {
-                "title": "Notify you of requests to play together",
-                "description": "By changing this parameter, you can make the bot notify you when someone decided to send a request to play together!"
-            }
-        },
-        "custom": {
-            "error": "Error in setting your own timer",
-            "title": "Setting timeouts",
-            "description": "With this command you can set your own reminder so that you do not forget anything!",
-            "set_field": "Timeout has been successfully set!",
-            "set_value": "The timeout was successfully set to `<time>`"
-        },
-        "no_args": "Wrong argument! Available arguments: `always`, `game`, `custom`"
-    },
+		"changing": {
+			"embed": {
+				"title": "Parameter change!",
+				"on": "Successfully set to `On`",
+				"off": "Successfully set to `Off`"
+			}
+		},
+		"always": {
+			"embed": {
+				"title": "Always notify when timeouts are over",
+				"description": "By changing this parameter, you can make the bot always notify you about the end of all your timeouts!"
+			}
+		},
+		"games": {
+			"embed": {
+				"title": "Notify you of requests to play together",
+				"description": "By changing this parameter, you can make the bot notify you when someone decided to send a request to play together!"
+			}
+		},
+		"custom": {
+			"error": "Error in setting your own timer",
+			"title": "Setting timeouts",
+			"description": "With this command you can set your own reminder so that you do not forget anything!",
+			"set_field": "Timeout has been successfully set!",
+			"set_value": "The timeout was successfully set to `<time>`"
+		},
+		"no_args": "Wrong argument! Available arguments: `always`, `game`, `custom`"
+	},
 	"visible": {},
 	"walk_pet": {},
 	"walk_together": {},
@@ -403,10 +485,24 @@
 		"none": "None"
 	},
 	"errors": {
+		"no_roles": "The bot could not get information about your roles. Most likely, the bot does not have the necessary rights, or some of them do not have the text.\nIf there was a misunderstanding, contact the support server",
+		"doesnt_see_role": "The bot doesn't see this role",
+		"not_an_admin": "You cannot use this command because you do not have `administrator` rights.",
 		"crime_lock": "You can't do this until 3 minutes have passed since the battle began!",
 		"less_money": "You have less money!",
 		"less_that_one": "This number is less than one",
 		"not_a_number": "This is not a number",
-		"no_user": "I didn't see a mention!\n\nExample: <example>"
+		"no_user": "I didn't see a mention!\n\nExample: <example>",
+		"modal": {
+			"spaces": "Your new value has spaces!",
+			"not_a_number": "Your new value is not a number!",
+			"below_zero": "Your new value is less than <1>!",
+			"below_number": "The number is bigger that <1>",
+			"too_long": "Your new value has more than <1> characters!"
+		}
+	},
+	"select_menu_pages": {
+		"next": "Next page",
+		"back": "Previous page"
 	}
 }
