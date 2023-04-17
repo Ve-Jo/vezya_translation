@@ -215,7 +215,66 @@
 	"pay_role": {},
 	"pay": {},
 	"play_invite": {},
-	"profile": {},
+	"profile": {
+		"no_user": "Couldn't find this user!",
+		"gender_error": "Couldn't get the gender in the profile. Maybe this member never opened his profile",
+		"love": {
+			"one": "`🖤 Tough love`",
+			"two": "`🤍 Agreement`",
+			"three": "`💟 Decoration`",
+			"four": "`❤️ Love`",
+			"five": "`❤️ Sure love`",
+			"six": "`💖 Strong love`"
+		},
+		"happy": {
+			"one": "`☠️ Depression`",
+			"two": "`🙄 Despair`",
+			"three": "`😥 A bit sad`",
+			"four": "`🤗 A bit fun`",
+			"five": "`😍 Love of Life`"
+		},
+		"marriage": {
+			"lonely": "```👤 Lonely <cmd>```",
+			"confrmation": "```👥 In the process of confirming...```",
+			"married": "` 💏 ` Married on <user> `<your_gender_emoji> and <partner_gender_emoji> \n\n```💞 Percentage of love: <love_percent>% (<your_percentage> / <partner_percentage>)\n😃 Happyness: <happy_percent>% (<your_happy_percentage> / <partner_happy_percentage>)\nChat to the partner: <cmd>```"
+		},
+		"male": "Male",
+		"female": "Female",
+		"transgender": "Transgender",
+		"no_description": "No description",
+		"no_gender": "No gender",
+		"no_name": "No name",
+		"no_age": "No age",
+		"main_line": "<gender_emoji> <name>",
+		"description_line": "<description>",
+		"age": "<age> years",
+		"rating": "Rating: <rating>",
+		"embed": {
+			"title": "Profile <user>",
+			"description": "Main profile information",
+			"about_me_title": "About me",
+			"about_me_value": "```\n<profile_name>\n<profile_age> y.o\n<gender_emoji> <gender_description>````#<pos_money> <server_money>` `#<pos_level> <server_lvl>` `#<pos_home> <server_house>`",
+			"about_description_title": "Description",
+			"about_description_value": "```\n\"<profile_description>\"````Rating: <rating>`",
+			"marriage_title": "Marriage",
+			"level_title": "Your level",
+			"level_value": "```<server_house> <currentLevel> level\n🌇 <currentXP> XP\n<server_lvl> Total XP: <totalXP>```",
+			"stats_title": "Stats:",
+			"stats_value": "```\n<currentBalance> <server_money>\n<currentBalance_bank> <server_bank>\nTotal: <total>\n\n<currentReputation> <server_rep>\n<currentClevers> <server_clevers>```",
+			"other_title": "Other:",
+			"other_value": "```\nAccount was created: \n<account_creating_date> <how_long>```"
+		},
+		"autocomplete": {
+			"no_arg": "Select the user to preview"
+		},
+		"no_wallpaper": "```No wallpaper. You can set it in <command>\n<LVL>LVL+```",
+		"wallpaper": "Wallpaper",
+		"buttons": {
+			"marriage_settings": "Marriage settings",
+			"profile_setup": "Profile setup",
+			"rating_unlocked": "Viewing another member's profile"
+		}
+	},
 	"ride": {},
 	"shop": {},
 	"sleep_little": {},
