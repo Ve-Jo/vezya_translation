@@ -7,7 +7,8 @@
 		"errors": {
 			"universal": "You have to wait `<cooldown>`",
 			"crime": "You still can't crime! You have to wait `<cooldown>`",
-			"respect": "You still can't pay respect! You have to wait `<cooldown>`"
+			"respect": "You still can't pay respect! You have to wait `<cooldown>`",
+			"pay": "You still can't pay! You have to wait `<cooldown>`"
 		},
 		"ready": {
 			"daily": "✔️ You can get /daily",
@@ -212,8 +213,37 @@
 		"start_error": "Error opening level information. The bot probably can't process the installed cover art!\n\nChange it, or add it as an attachment instead of a link!"
 	},
 	"marriage": {},
-	"pay_role": {},
-	"pay": {},
+	"pay_role": {
+		"error": "This role does not have its own balance! Make sure you enter the correct ID",
+		"embed": {
+			"title": "Refilling the role balance",
+			"field": "You have sent money to the balance of the role",
+			"value": "<role> `<role_balance> <server_money>` -> `<role_balance_new> <server_money> (+<your_money>)`"
+		}
+	},
+	"pay": {
+		"pay_myself": "You can't transfer money to yourself!",
+		"marriage_half_limit": "You can't transfer more than half of your total cash at a time\nThis limit will not apply when transferring to your partner!",
+		"marriage_half": "\n`❤️` Transferring to a partner removes the limit of a maximum of half the cash!",
+		"from_private_to_global": "You cannot make such transfers from private servers",
+		"global_balance_no_subscription": "You can transfer to the global balance of a user without a subscription only by specifying up to half of your global account.",
+		"global_balance_limited": "This member's global balance is temporarily limited. You can only transfer a quarter (<global_money>) until he withdraws all money from the global account",
+		"autocomplete": {
+			"number_error": "Error when entering the number",
+			"more_that_half": "You cannot transfer more than half of all cash (You have: <money>)",
+			"too_much": "You don't have that much! You have only: <money>",
+			"selected_member": "The selected member has: <money> <server_money>",
+			"no_user": "Select a member to preview"
+		},
+		"embed": {
+			"title": "Money Transfer!",
+			"description": "You have successfully sent `<money> <server_money>` to member <user>!<on_marriage_text>",
+			"your_balance_field": "Your balance",
+			"your_balance_value": "```\n<money> <server_money> (-<payed>)```",
+			"him_balance_field": "His balance",
+			"him_balance_value": "```\n<money> <server_money> (+<payed>)```"
+		}
+	},
 	"play_invite": {},
 	"profile": {
 		"no_user": "Couldn't find this user!",
@@ -523,6 +553,14 @@
 			"timeouts": "Timeouts",
 			"footer": "To correct NaN numbers, we recommend using /fixme",
 			"another_user": "Here you can find out the current balance of the member"
+		},
+		"autocomplete": {
+			"main": "<server_money> <1>",
+			"bank": "<server_bank> <1>",
+			"total": "Total: <1> <server_money>",
+			"rep": "<server_rep> <1>",
+			"donate": "<server_donate> <1>",
+			"rebirth": "<server_rebirth> <1>"
 		},
 		"server_leaderboard": "🌌 Your server in the #<i> place. Total <2> <server_money>",
 		"roles_list": "<role> -> `<1> <server_money>`",
