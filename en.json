@@ -172,8 +172,7 @@
 		"user_selector": {
 			"selector_title": "Select a member (Total: <users_total>)",
 			"label": "There is no one you are looking for?",
-			"description": "Specify its ID in the key argument",
-			"error": "Error. Most likely, there is no one or the limit of 25 members is exceeded."
+			"description": "Specify its ID in the key argument"
 		},
 		"no_private": "This server does not have the `Private Server`\n\nMore information in the /settings command",
 		"interaction": {}
@@ -203,7 +202,46 @@
 	"walk_together": {},
 	"walk": {},
 	"wallpaper": {},
-	"wipe": {},
+	"wipe": {
+		"embed": {
+			"title": "Reset command",
+			"description": "Here you can delete the data you need on the server"
+		},
+		"options": {
+			"select": "Select the deletion type",
+			"select_category": "Select a category to delete",
+			"select_alldata": "Delete all server data",
+			"member": {
+				"title": "1. Specific member.",
+				"description": "Deletes data on the server of the selected member"
+			},
+			"category": {
+				"title": "2. Cleaning the category",
+				"description": "Reset something specific at once for all"
+			},
+			"full": {
+				"title": "3. FULL WIPE",
+				"description": "ALL PROGRESS, ROLES AND SERVER SETTINGS WILL BE ERASED",
+				"back_select": "Back",
+				"confirm_select": "Confirm complete data deletion",
+				"warning_message": "Are you sure you want to delete **all bot data about the server?**\n**All participant progress, server settings, and more will be erased!**",
+				"deletion_started": "The deletion process has started. **It cannot be undone! The message will be changed when it's done!",
+				"deletion_done": "All data has been deleted!"
+			}
+		},
+		"buttons": {
+			"mass_delete": "REMOVE EVERYTHING",
+			"remove_key": "Remove the fixed key"
+		},
+		"searching": "Looking for people with data on your server... Wait",
+		"no_users": "There's nothing here.",
+		"choose_member": "Choose a member",
+		"have_to_choose_member": "You need to choose a member",
+		"choose_to_delete": "Choose what to delete",
+		"db_empty": "Nothing",
+		"db_preview": "Select what exactly you want to delete\n```<db_name_or_empty>```",
+		"timeout_delete_no_private": "Unfortunately, you cannot delete the timeout without enabling the **Private Server** option in the settings"
+	},
 	"level": {
 		"autocomplete": {
 			"voice_no_data": "No data",
@@ -842,6 +880,7 @@
 	},
 	"select_menu_pages": {
 		"next": "Next page",
-		"back": "Previous page"
+		"back": "Previous page",
+		"error": "Error. Most likely, there is no one or the limit of 25 members is exceeded."
 	}
 }
