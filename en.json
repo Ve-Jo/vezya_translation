@@ -6,6 +6,7 @@
 	"timeouts": {
 		"errors": {
 			"universal": "You have to wait `<cooldown>`",
+			"work": "You still can't run a game. You have to wait `<cooldown>`",
 			"crime": "You still can't crime! You have to wait `<cooldown>`",
 			"respect": "You still can't pay respect! You have to wait `<cooldown>`",
 			"pay": "You still can't pay! You have to wait `<cooldown>`"
@@ -157,7 +158,26 @@
 		},
 		"succesed": "Your role was successfully deleted from shop"
 	},
-	"admin": {},
+	"admin": {
+		"list": {
+			"no_db": "Unfortunately, the database with the server data is empty.",
+			"no_args": "\n\n! You have the option to look at data in other database tables.\n! All available categories: <categories>\n\n",
+			"licence_error": "\n\n! You can't change the data here, only view it. Here timeouts until how long we keep the data",
+			"timeout_error": "Error",
+			"main_info": "# <total_keys> keys in the DB <db_name> (Total in world: <total>)\n# Founded users with the data: <users_count>"
+		},
+		"manually_set": "Successfully set `<value>` in the database to `<new_value>`",
+		"set_error": "Failed to set a value. Make sure you entered the correct data!",
+		"select_the_user": "Select the user",
+		"user_selector": {
+			"selector_title": "Select a member (Total: <users_total>)",
+			"label": "There is no one you are looking for?",
+			"description": "Specify its ID in the key argument",
+			"error": "Error. Most likely, there is no one or the limit of 25 members is exceeded."
+		},
+		"no_private": "This server does not have the `Private Server`\n\nMore information in the /settings command",
+		"interaction": {}
+	},
 	"benchmark": {
 		"embed": {
 			"title": "Measuring database speed",
@@ -174,6 +194,16 @@
 	"gym": {},
 	"hobby": {},
 	"home": {},
+	"ride": {},
+	"shop": {},
+	"sleep_little": {},
+	"sleep": {},
+	"visible": {},
+	"walk_pet": {},
+	"walk_together": {},
+	"walk": {},
+	"wallpaper": {},
+	"wipe": {},
 	"level": {
 		"autocomplete": {
 			"voice_no_data": "No data",
@@ -212,7 +242,36 @@
 		"compact_mode": "`Total: <total_xp>xp` `🔊 <voice>` `🌐 #<pos>`",
 		"start_error": "Error opening level information. The bot probably can't process the installed cover art!\n\nChange it, or add it as an attachment instead of a link!"
 	},
-	"marriage": {},
+	"marriage": {
+		"message": {
+			"title": "You got a message",
+			"description": "\"<message>\""
+		},
+		"request": {
+			"title": "You get a request!",
+			"description": "Member <member> wants to be your partner. Send a reciprocal request to him or ignore it."
+		},
+		"married": {
+			"title": "You got married!",
+			"description": "You have successfully married with the <member>. Congratulations"
+		},
+		"divorce": {
+			"title": "You broke up!",
+			"description": "You broke up with member <member>. We hope everything will be all right.."
+		},
+		"message_partner_local_error:": "I didn't get a chance to send him a message about it in private. Ask him to give me access to his PM.",
+		"no_partner": "You're not married to anyone right now!",
+		"no_request": "Error. Most likely your partner still hasn't accepted the request!",
+		"no_text": "You didn't specify a text to send to the partner!",
+		"message_sended": "A message has been sent to both you and your partner!",
+		"divorced_text": "You are more married to your partner",
+		"multiple_marry": "Don't repeat yourself :)",
+		"marry_yourself": "You can't marry yourself with yourself -.-",
+		"already_have_partner": "The member already has a partner",
+		"marriage_sent": "You successfully suggested getting married to this user!",
+		"marriage_success": "**CONGRATULATIONS!** Now you're married!",
+		"marriage_warning": "Warning. In order for you to really get married, you need the consent of your other half, who must send you the same request in return!"
+	},
 	"pay_role": {
 		"error": "This role does not have its own balance! Make sure you enter the correct ID",
 		"embed": {
@@ -303,13 +362,151 @@
 			"marriage_settings": "Marriage settings",
 			"profile_setup": "Profile setup",
 			"rating_unlocked": "Viewing another member's profile"
+		},
+		"interaction": {}
+	},
+	"work": {
+		"fast_launch": {
+			"text": "Press the start button to continue",
+			"start_btn": "Start",
+			"starting_error": "There was an error when starting the game. You can try to run the game with the usual /work (without selection) or contact support",
+			"final_text": "The game was started via a quick launch\nIf the game does not start, run it via normal /work"
+		},
+		"games_categories": {
+			"risky": {
+				"title": "Risky games",
+				"description": "Want to take a risk but earn more? We've got something"
+			},
+			"normal": {
+				"title": "Normal games",
+				"description": "Play without losing anything!"
+			}
+		},
+		"embed": {
+			"author_text": "Selecting work for <user>",
+			"no_data": "No data.",
+			"balance": "Balance",
+			"balance_text": "```\n<money> <server_money>\n<bank> <server_bank>\nTotal: <total>```",
+			"welcome": {
+				"title": "Welcome!",
+				"description": "Select the game you want to play from the drop-down list below!"
+			}
+		},
+		"tags": {
+			"multiplayer": "`🌌 Multiplayer`\n ",
+			"donate_money": "`<server_donate> Donate currency earnings`\n ",
+			"records": "`✏️ Records`\n ",
+			"your_record": "Your record: <record>",
+			"no_record": "No record",
+			"rebirths": "`🔄 Rebirths`\n ",
+			"hard": "`💣 1 life` ",
+			"iq": "`📚 Requires extra knowledge`"
+		},
+		"buttons": {
+			"developement": "Game in development",
+			"you_died": "You are dead (<timeout>)",
+			"game_selector": "📜 Select the game (<total_games_count>)",
+			"rating_stats": "(<rate> of <member_count> members)",
+			"rate_button": "Rate the game <rating_stats>"
+		},
+		"no_game": "No game selected",
+		"interaction": {
+			"back": "Back",
+			"rating": {
+				"game_selected": "Game rating \"<game_name>\"",
+				"selecting_menu": "You are about to leave your evaluation of the game.",
+				"selecting_menu_description": "Choose your grade from the options below",
+				"select_rate_button": "Select a game rating",
+				"your_current_rating": "(Your current grade)",
+				"five": "You really liked this game",
+				"four": "Were you satisfied after the game",
+				"three": "You are neutral.",
+				"two": "You didn't like the game",
+				"one": "You didn't like the game at all",
+				"modal_title": "May I ask?",
+				"modal_description": "Why didn't you like the game?",
+				"sent_modal_bonus": "We will also look at what you wrote in the modal window\n",
+				"sent": "Your review in `<rate>⭐` for the game `<game_name>` has been successfully submitted!\n<sent_modal_bonus>You can change your score at any time by submitting it again!"
+			},
+			"start": {
+				"data_error": {
+					"buttons": {
+						"ignore_and_run": "Ignore and run",
+						"replace": "Run with broken data replacement",
+						"wipe": "Reset ALL data and run"
+					},
+					"field": {
+						"title": "❗️ Error checking data correctness when starting the game!",
+						"description": "During the data validation for this game, something went wrong.\n\nChoose a method of fixing the problem from the options above."
+					}
+				}
+			}
 		}
 	},
-	"ride": {},
-	"shop": {},
-	"sleep_little": {},
-	"sleep": {},
-	"support": {},
+	"support": {
+		"embed": {
+			"title": "Support center",
+			"description": "Get support regarding the bot from any server!",
+			"welcome_field": {
+				"title": "We are happy to welcome you!",
+				"description": "Select what concerns you about the bot from the drop-down list below"
+			},
+			"your_message": {
+				"title": "Your current message",
+				"none": "No message",
+				"description": "```\n<text_or_none>```"
+			}
+		},
+		"selector": {
+			"select_page": "Select the page",
+			"one": {
+				"title": "Go to the support server",
+				"description": "Get an invitations to the support server",
+				"support_server_field": {
+					"title": "Our discord support server",
+					"description": "`🛫 Vesya・Community` is our support server. Here you can get help faster, as well as keep track of new bot updates!",
+					"button_text": "Go to the support server"
+				}
+			},
+			"two": {
+				"title": "Ask a question about the bot",
+				"description": "Questions like \"HOW DOES THIS WORK?\" can be asked here",
+				"category_name": "Question"
+			},
+			"three": {
+				"title": "I have a suggestion.",
+				"description": "Do you know how to improve the bot? You're in the right place.",
+				"category_name": "Suggestion"
+			},
+			"four": {
+				"title": "I have a problem.",
+				"description": "If something doesn't work or breaks",
+				"category_name": "Problem"
+			},
+			"five": {
+				"title": "Other",
+				"description": "If none of the options fit",
+				"category_name": "Other"
+			}
+		},
+		"interaction": {
+			"question_write": {
+				"modal_title": "Question input field",
+				"your_message": "Specify your message"
+			},
+			"send": {
+				"nevermind": "Nevermind",
+				"confirm": "Confirm sending",
+				"warning_message": "Are you sure you want to send this message to the Vesya Support Center? Please note that you may be blocked from using the bot if you send messages for \"fun\" purposes."
+			},
+			"sended": "Your message has been successfully sent for review!\nYou will also receive a notification in your PM regarding your ticket (its grades, verification and final decision)"
+		},
+		"buttons": {
+			"write_text": "Write text",
+			"category_preview": "Category: <category>",
+			"send": "Send"
+		}
+	},
 	"thx": {
 		"errors": {
 			"private_server": "You can't thank for the global booster anymore because of the private server!",
@@ -361,13 +558,6 @@
 		},
 		"no_args": "Wrong argument! Available arguments: `always`, `game`, `custom`"
 	},
-	"visible": {},
-	"walk_pet": {},
-	"walk_together": {},
-	"walk": {},
-	"wallpaper": {},
-	"wipe": {},
-	"work": {},
 	"help": {
 		"selector": {
 			"placeholder": "Select the help category",
