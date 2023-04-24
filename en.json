@@ -194,14 +194,178 @@
 	"hobby": {},
 	"home": {},
 	"ride": {},
-	"shop": {},
+	"shop": {
+		"exchange": {
+			"title": "Currency Exchange",
+			"what_is_that": "What kind of exchanger?",
+			"what_is_value": "Exchange your donat-currency for currency within available games!",
+			"select_game": "Select game",
+			"game_preview": "<game_emoji> Selected: <game_name>",
+			"back": "Back",
+			"convert": "Convert <money_to_exchange> <server_donate>",
+			"convert_two": "You'll get <money_to_get> $",
+			"confirm": "Confirm"
+		},
+		"main": {
+			"author_name": "🛍️ Shop",
+			"balance": "Balance",
+			"balance_value": "```\n<money> <server_money>\n<donate> <server_donate>```",
+			"welcome": {
+				"title": "Welcome to the shop!",
+				"description": "Select the upgrades category you want to choose!"
+			}
+		},
+		"server_roles": {
+			"title": "Server roles",
+			"create_own_role": "Create own role",
+			"extend_own_role": "Extend current own role",
+			"own_role": "<own_role_price><server_money> (<length> minutes)",
+			"lvl_roles": "Roles for level",
+			"no_roles": {
+				"title": "There are no roles.",
+				"description" :"Use \"<command>\" to get started!"
+			},
+			"no_purchased_roles": {
+				"title": "There are no purchased roles",
+				"description": "There doesn't seem to be a single purchased role installed on this server!"
+			},
+			"no_level_roles": {
+				"title": "There is no roles for a level!",
+				"description": "The creator of the server did not set roles for levels. Maybe... ask him to do it?"
+			},
+			"voice_roles": {
+				"title_yes": "Given out for the voice. activity!",
+				"title_no": "There is no role for voice. activity!",
+				"title_no_description": "The owner of the server should add this..."
+			}
+		},
+		"selector": {
+			"role_purchase": "Role purchase",
+			"custom_role": "Personal role customization",
+			"upgrade_select": "Select an upgrade (<total_upgrades>)",
+			"page": "Select tab",
+			"upgrades": {
+				"title": "Upgrades",
+				"description": "The most important"
+			},
+			"server_roles": {
+				"title": "Server roles",
+				"description": "Buy the roles that the owner has set!",
+				"successfully_extended": "Your personal role has been successfully extended!",
+				"extended_error": "I could not find any of your personal role for the extension",
+				"already_have_personal": "You already have your personal role!",
+				"personal_bought": "The personal role has been successfully purchased!\nTo edit it, reopen the store!",
+				"bought": "The role was successfully purchased!",
+				"logs_reason": "The user bought a personal role in the store"
+			},
+			"house": {
+				"title": "Home",
+				"description": "Buy furniture for home"
+			},
+			"workers": {
+				"title": "Workers",
+				"description": "Hire workers",
+				"multiply_workers_error": "You cannot buy two types of workers at the same time"
+			},
+			"boosters": {
+				"title": "Boosters",
+				"description": "Purchase Global Boosters",
+				"booster_already_activated": "Unfortunately. Some booster above (<booster_multiplier>X) already activated!\n\nIt is still valid for `<booster_timeout>`"
+			},
+			"premium": {
+				"title": "Premium",
+				"description": "Unique premium features"
+			},
+			"light": {
+				"name": "Light subscription",
+				"active": "Active",
+				"inactive": "Inactive",
+				"click_for_info": "<active_or_inactive>. Click for more info",
+				"bought": "Congratulations on your 1-month **Light** subscription!",
+				"already_have": "You have already purchased a subscription",
+				"buying_warning": "<user_tag>, are you sure you want to buy a Light subscription for donat currency?",
+				"not_enough": "You don't have enough donation money!",
+				"about": {
+					"what_is": "What is that?",
+					"what_is_description": "In short - it's a subscription, which opens you additions to the games, a global balance between servers, as well as the opportunity to be more cooler! *Also, it helps cover hosting costs!*",
+					"how_to_get": "How do I get a reward by subscribing to **Boosty?**",
+					"how_to_get_description": "1) Register (if you haven't done so), and don't forget to connect your discord || (\"Account Settings\" -> \"Connected apps\") ||\n2) Go to our [support server] (https://discord.gg/PYnpH7RtUr)\n3) Wait for the bot to give you a role on the server\n4) Write the command `/donate-check` in the offtop channel\n * If you buy a subscription for several months, you need to write this command every month.",
+					"go_to_boosty": "Go to Boosty",
+					"manually_buy": "Buy Light (<month> month, <price><server_donate>)"
+				}
+			},
+			"money_exchange": {
+				"title": "Money exchange",
+				"description": "Exchange your donation currency for game currency!",
+				"no_game_error": "Bot could not find the game. Try again later",
+				"convert_error": "An error occurred during the conversion. Please try again later",
+				"not_enough_donate": "You don't have enough donat-currency to make the exchange",
+				"no_data_game": "You have not generated data in this game. Run it and play it before you add money into the game account.",
+				"converted": "You successfully exchanged `<money> <server_donate>` to `<game_money>$` \"<game_name>\"",
+				"modal": {
+					"title": "Entering a number",
+					"text_input": "Specify the number"
+				}
+			},
+			"back": {
+				"title": "Back",
+				"description": "Go back"
+			}
+		},
+		"not_enough_money": {
+			"title": "Not enough money!",
+			"description": "You don't have enough `<money> <server_money>` money to buy ```\n<upgrade_description>```"
+		},
+		"not_enough_level": {
+			"title": "You don't have enough level!",
+			"description": "You need to get **<level>** level!"
+		},
+		"maximum_level": {
+			"title": "Maximum level!",
+			"description": "This upgrade has already been upgraded to the maximum level!"
+		},
+		"upgrades_bought": {
+			"worker": "worker!",
+			"booster": "booster",
+			"premium": "premium upgrade",
+			"upgrade": "upgrade!",
+			"home_bonus": "```\nYou get +<home_xp> (<total_home_xp>) XP for your house!```",
+			"first": "You successfully bought <type>"
+		},
+		"private_server_category": "Unfortunately, this category is not available for servers with the \"Private server\" option enabled",
+		"own_role_blocked": "The server administrator has for the time being denied buying such roles",
+		"roles_align": {
+			"id": "ID: <id>",
+			"role": "Role #<id>",
+			"own_role": "Role <username>",
+			"purchasable_role": "<role>\n```\"<description>\"\n# ID: <id>\n# Price: <price><server_money>```",
+			"purchasable_role_selector": "<price><server_money> | <description>",
+			"to": " to <delete_level>",
+			"lvl_role": "\n`ID: <id>` <role> -> `from <level><to> level`",
+			"voice_role": "\n`ID: <id>` <role> -> `from <level><to> minutes`",
+			"temp_role": "<role>\n```\"<description>\"\n# ID: <id>\n# Price: <price><server_money> (<role_time> minutes)```",
+			"temp_role_selector": "<price><server_money> (<role_time> minutes) | <description>",
+			"no_description": "No description",
+			"earning_role": "<role>\n```\n\"<description>\"\nComission: <comission>%\nEarning: <earning>% from the role balance! (<role_balance><server_money>\n# Price: <price><server_money>```",
+			"earning_role_selector": "<price><server_Money> (+<earning>% from <role_balance>) | <description>",
+			"private_roles_title": "✅ Support for personal roles!",
+			"private_roles_description": "`ID: <id>` The server administrator gives each member the ability to purchase their own `Personal Temporary Role!`"
+		}
+	},
 	"sleep_little": {},
 	"sleep": {},
 	"visible": {},
 	"walk_pet": {},
 	"walk_together": {},
 	"walk": {},
-	"wallpaper": {},
+	"wallpaper": {
+		"about": "This is a command to install your cover art in `<command>`\n\nYou forgot to include the **link to the image**!",
+		"not_an_link": "This is not a link to an image.\n\nYou can send the image and click on Right Click -> Copy Link.",
+		"set": "The cover has been successfully updated!\nIn case you want to remove it, you can do so by typing `<command>`",
+		"not_ten_level": "You don't have a <required> level for this command! (You have <current_level>)",
+		"removed": "Successfully removed the wallpaper",
+		"nsfw_check_failure": "The bot thinks it's forbidden to install such images!\nPlease note that if you **deliberately** want to install NSFW images, you may get blocked"
+	},
 	"wipe": {
 		"embed": {
 			"title": "Reset command",
@@ -867,9 +1031,13 @@
 		"not_an_admin": "You cannot use this command because you do not have `administrator` rights.",
 		"crime_lock": "You can't do this until 3 minutes have passed since the battle began!",
 		"less_money": "You have less money!",
+		"less_donate_money": "You have less much donat-currency",
 		"less_that_one": "This number is less than one",
 		"not_a_number": "This is not a number",
 		"no_user": "I didn't see a mention!\n\nExample: <example>",
+		"role_problem": "Problems when giving out the role. Make sure it is below the bot role and I have the right permissions!",
+		"role_another_server": "This role was not created on this server. Try again.",
+		"role_already_have": "You already have that role.",
 		"modal": {
 			"spaces": "Your new value has spaces!",
 			"not_a_number": "Your new value is not a number!",
