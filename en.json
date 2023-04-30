@@ -9,7 +9,17 @@
 			"work": "You still can't run a game. You have to wait `<cooldown>`",
 			"crime": "You still can't crime! You have to wait `<cooldown>`",
 			"respect": "You still can't pay respect! You have to wait `<cooldown>`",
-			"pay": "You still can't pay! You have to wait `<cooldown>`"
+			"pay": "You still can't pay! You have to wait `<cooldown>`",
+			"sleeping": "You are asleep! You can only do this through after `<cooldown>`",
+			"walk_pet": "You are walking your pet! You can only do this after `<cooldown`",
+			"hobby": "You do your hobby! You can only do it after `<cooldown>`",
+			"gym": "You're in the gym! You'll be able to do it after `<cooldown>`",
+			"computer": "You are sitting at your computer! You can only do this after `<cooldown>`",
+			"ride": "You are riding! You can only do this after `<cooldown>`",
+			"walk": "You're still on the walk! You need to wait `<cooldown>`",
+			"your_already_walking": "You're already walking with someone! Wait `<cooldown>`",
+			"friend_walking": "Your friend is already walking with someone! Wait `<cooldown>`",
+			"friend_sleeping": "The person you mentioned is asleep right now! Wait `<cooldown>`"
 		},
 		"ready": {
 			"daily": "✔️ You can get /daily",
@@ -185,15 +195,6 @@
 			"field_value": "For each database, we added a fake user key on your server with the value \"test\" and then removed that key and measured the speed.\n\nThe speed of the main database (economy): `<economy>ms` \nThe speed of timeout processing: `<timeout>ms`\nThe speed of the house database: `<home>ms`\nSpeed of getting profiles: `<profile>ms`\nSettings speed: `<settings>ms`\nThe speed of the fisherman simulator: `<fisher>ms`\nSpeed of records: `<records>ms`\nThe speed to buy upgrades: `<upgrades>ms`\nSpeed of setting custom roles: `<settings>ms`\nPremium database speed: `<premium>ms`\nRpg clicker speed: `<rpg>ms`\nThe speed of the mining simulator: `<mining>ms`\nThe speed of account term database: `<account_updates>ms`\nHomeless simulator speed: `<bomz>ms`\n\nTotal: `<total>ms`"
 		}
 	},
-	"computer": {},
-	"discovery": {},
-	"donate_check": {},
-	"fixme": {},
-	"giveaway": {},
-	"gym": {},
-	"hobby": {},
-	"home": {},
-	"ride": {},
 	"shop": {
 		"exchange": {
 			"title": "Currency Exchange",
@@ -223,7 +224,7 @@
 			"lvl_roles": "Roles for level",
 			"no_roles": {
 				"title": "There are no roles.",
-				"description" :"Use \"<command>\" to get started!"
+				"description": "Use \"<command>\" to get started!"
 			},
 			"no_purchased_roles": {
 				"title": "There are no purchased roles",
@@ -347,17 +348,222 @@
 			"temp_role_selector": "<price><server_money> (<role_time> minutes) | <description>",
 			"no_description": "No description",
 			"earning_role": "<role>\n```\n\"<description>\"\nComission: <comission>%\nEarning: <earning>% from the role balance! (<role_balance><server_money>\n# Price: <price><server_money>```",
-			"earning_role_selector": "<price><server_Money> (+<earning>% from <role_balance>) | <description>",
+			"earning_role_selector": "<price><server_money> (+<earning>% from <role_balance>) | <description>",
 			"private_roles_title": "✅ Support for personal roles!",
 			"private_roles_description": "`ID: <id>` The server administrator gives each member the ability to purchase their own `Personal Temporary Role!`"
 		}
 	},
-	"sleep_little": {},
-	"sleep": {},
-	"visible": {},
-	"walk_pet": {},
-	"walk_together": {},
-	"walk": {},
+	"discovery": {},
+	"donate_check": {},
+	"fixme": {},
+	"giveaway": {},
+	"home_actions": {
+		"not_enough_level": {
+			"title": "You don't have enough level at home!",
+			"description": "Access to this action is still closed due to the small level of the house! Try doing something else or setting up your space!"
+		},
+		"no_home": "Please generate your home to access the action!",
+		"friend_no_home": "The member you mentioned does not have a house generated! Cancel.",
+		"no_car": "You don't have a car to use this command!",
+		"no_pet": "You do not have a pet to do this action",
+		"no_computer": "You dont have a computer!",
+		"no_hobby_upgrade": "You don't have the upgrade for that!",
+		"you_tired": "You are too tired! You can't perform any more actions! Take a rest!",
+		"friend_tired": "Your friend is too tired!",
+		"myself": "You can't do this to yourself!",
+		"embed": {
+			"walk": "Walk!",
+			"walk_pet": "Walk with the pet!",
+			"walk_together": "Travel together!",
+			"computer": "Computer",
+			"rest": "Rest!",
+			"gym": "Gym!",
+			"hobby": "Hobby!",
+			"actions": {
+				"car": "You used your car and went for a ride!",
+				"walk": "You decided to go for a walk, get some fresh air and have some fun!",
+				"walk_pet": "You have started walking with your pet!",
+				"walk_together": "You started walking with <user> together!",
+				"computer": "You decide to stay home and do something at the computer!",
+				"gym": "You've started an exercise session at the gym to improve your stamina!",
+				"sleep": "You've gone to sleep!\n\n* You can't do any other activities until this one is over!",
+				"hobby": "You started doing what you really like!"
+			},
+			"xp": "Your XP:",
+			"xp_description": "```\n<xp> (+<bonus_xp>)\n<energy> ⚡ (-<energy_loss>)```",
+			"xp_description_up": "```\n<xp> (+<bonus_xp>)\n<energy> ⚡ (+<energy_up>)```",
+			"xp_together": "```\n<your_xp> (+<your_bonus_xp>)\n<your_energy> ⚡ (-<your_energy_loss>)``` ```TO FRIEND:\n<friend_xp> (+<friend_bonus_xp>)\n<friend_energy> ⚡ (-<friend_energy_loss>))```",
+			"xp_gym": "```\n<xp> (+<bonus_xp>)\n<energy> ⚡ (-<energy_loss>)\n+<stamina_boost> to the max. energy```",
+			"timeout": "Timeout",
+			"timeout_description": "```\n<time><emoji>```"
+		},
+		"bonus": {
+			"title": "You reseived a bonus!",
+			"description": "`+<bonus> <server_money>`"
+		},
+		"lost_money": {
+			"title": "You lost some money!",
+			"description": "`-<lost> <server_money>`"
+		}
+	},
+	"home": {
+		"upgrades": {
+			"home": {
+				"zero": "🏠 Parent's House (0)",
+				"one": "🏡 Rental Apartment (1)",
+				"two": "🏡 Apartment in the City Center (2)",
+				"three": "🏬 Expensive Apartment (3)",
+				"four": "🏢 Multiple Apartments (4)",
+				"five": "🌇 50th Floor Apartment (5)",
+				"six": "🌆 100th Floor Apartment (6)",
+				"seven": "🌃 Apartment in Dubai (7)",
+				"eight": "🌁 Beyond the Borders (8)",
+				"nine": "🏰 Own Castle (9)",
+				"ten": "🏯 Own Japanese Castle (10)",
+				"eleven": "🌁 Insane Apartment (Outside Update)"
+			},
+			"pc": {
+				"zero": "Phone (0)",
+				"one": "Weak laptop (1)",
+				"two": "Normal computer (2)",
+				"three": "Computer` and `smartwatch (3)",
+				"four": "Professional computer (4)",
+				"five": "One of the expensive computers (5)",
+				"six": "Computer from another world (6)",
+				"seven": "Supercomputer (Outside Update)"
+			},
+			"bed": {
+				"zero": "Small couch (0)",
+				"one": "Single bed (1)",
+				"two": "Good double bed (2)",
+				"three": "Bed with rails (3)",
+				"four": "Insanely comfortable bed (4)",
+				"five": "Insanely expensive bed (5)",
+				"six": "Bed beyond boundaries (6)",
+				"seven": "Superbed (Outside Update)"
+			},
+			"pet": {
+				"zero": "No pet (0)",
+				"one": "Small kitten (1)",
+				"two": "Normal cat (2)",
+				"three": "Cat and dog (3)",
+				"four": "Cute rabbit (4)",
+				"five": "Long snake (5)",
+				"six": "Expensive peacock (6)",
+				"seven": "Small dragon (7)",
+				"eight": "Kitty girl (8)",
+				"nine": "Dragon without limits (Outside Update)"
+			},
+			"bike": {
+				"zero": "No bike (0)",
+				"one": "Small bike (1)",
+				"two": "Sport bike (2)",
+				"three": "Snowboarding (3)",
+				"four": "Surfing (4)",
+				"five": "Professional swimming (5)",
+				"six": "Horse riding (6)",
+				"seven": "Rock climbing (7)",
+				"eight": "Professional rock climbing (Outside Update)"
+			},
+			"car": {
+				"zero": "No car (0)",
+				"one": "Simple scooter (1)",
+				"two": "Average car (2)",
+				"three": "BMW (3)",
+				"four": "Truck (4)",
+				"five": "Sports car (5)",
+				"six": "Own train (6)",
+				"seven": "Own high-speed train (7)",
+				"eight": "Own airplane (8)",
+				"nine": "Own satellite (9)",
+				"ten": "Space travel (Outside Update)"
+			},
+			"box": {
+				"zero": "Bricks (0)",
+				"one": "Box (1)",
+				"two": "Bags (2)",
+				"three": "Toolbox (3)",
+				"four": "Big box (4)",
+				"five": "Luggage (5)",
+				"six": "Super luggage (Outside Update)"
+			}
+		},
+		"actions": {
+			"walk": {
+				"already": "`🏄🏼 On the walk!` `<cooldown>`\n",
+				"ready": "`🏄🏼` Take a walk `<command>`\n"
+			},
+			"walk_pet": {
+				"already": "`🐾 Walking with a pet!` `<cooldown>`\n",
+				"ready": "`🐾` Walk with a pet `<command>` `(🏡<home_level_requirement>+)`\n"
+			},
+			"ride": {
+				"already": "`🚗 Riding on transport!` `<cooldown>`\n",
+				"ready": "`🚗` Take a ride `<command>`\n"
+			},
+			"sleep": {
+				"already": "`🛏️ Sleeping!` `<cooldown>`\n",
+				"ready": "`🛏️` Go to sleep `<command>` OR `<second_command>` `(🏡<home_level_requirement>+)`\n"
+			},
+			"hobby": {
+				"already": "`✨ You're doing a hobby!` `<cooldown>`\n",
+				"ready": "`✨` Take up a hobby `<command>` `(🏡<home_level_requirement>+)`\n"
+			},
+			"computer": {
+				"already": "`👨‍💻 You are sitting at your computer!` `<cooldown>`\n",
+				"ready": "`👨‍💻` Sit at the computer `<command>` `(🏡<home_level_requirement>+)`\n"
+			},
+			"walk_together": {
+				"already": "`📠 You are walking with a friend!` `<cooldown>`\n",
+				"ready": "`📠` Walk with a friend `<command> <@user>` `(🏡<home_level_requirement>+)`\n"
+			},
+			"gym": {
+				"already": "`🙋‍♂️ You're in the gym!` `<cooldown>`\n",
+				"ready": "`🙋‍♂️` Go to the gym `<command>`\n"
+			}
+		},
+		"errors": {
+			"no_home_user": "The person you mentioned hasn't looked at his house yet!"
+		},
+		"embed": {
+			"no_level": {
+				"title": "You don't have enough level!",
+				"description": "Access to home building and activities is not yet available! Reach **<1> level** for access!"
+			},
+			"main": {
+				"title": "Your house!",
+				"description": "Here is your house in which you live. Gradually upgrade your home's furniture and level up to unlock bigger upgrades!\n\n**Bonuses:**\n`1` Upgrades are available up to `<upgrades_level>x`\n`2` Limit up to `<bank_money> <server_bank>` for daily bonus!",
+				"tools": "Your items",
+				"tools_description": "```\n<pc_emoji> <pc_title>\n\n<bed_emoji> <bed_title>\n\n<box_emoji> <box_title>\n\n<pet_emoji> <pet_title>\n\n<bike_emoji> <bike_title>\n\n<car_emoji> <car_title>```",
+				"preview": "Home preview",
+				"preview_description": "```\n<home_title>\n🏡 <homexp> XP / 🌠 <homelevel> LVL\nTotal: <home_total_xp> XP``` ```\n<home_str>\n```\n```Your energy:\n<energy>/<energy_max> ⚡```",
+				"actions": "Actions",
+				"actions_description": "**1 Walking:**\n<walk_text><walk_pet_text><walk_together_text>\n**2 Travels:**\n<ride_text><hobby_text>\n**+ Other:**\n<gym_text><pc_text><sleep_text>",
+				"no_data": "No data."
+			}
+		}
+	},
+	"custom_language": {
+		"embed": {
+			"title": "Custom language",
+			"description": "Customize the bot's responses by customizing the bot's language file",
+			"path": {
+				"name": "Path",
+				"description": "Select a category from the list below to start editing!"
+			},
+			"object_preview": "<1> elements"
+		},
+		"selector": {
+			"name": "Select the category"
+		},
+		"modal": {
+			"new_text": {
+				"name": "Setting the text",
+				"name_two": "Specify new text"
+			},
+			"arguments_error": "Make sure you don't forget to specify the <arguments> in your text\nThese are mandatory, because they will be automatically replaced with the correct values for each member"
+		}
+	},
 	"wallpaper": {
 		"about": "This is a command to install your cover art in `<command>`\n\nYou forgot to include the **link to the image**!",
 		"not_an_link": "This is not a link to an image.\n\nYou can send the image and click on Right Click -> Copy Link.",
@@ -993,6 +1199,84 @@
 		"snake_boost": {
 			"name": "Clevers",
 			"description": "Increase the player's field in the game Snake, when there is not enough space"
+		},
+		"house_upgrade": {
+			"name": "(<from_xp>-<to_xp>) House Upgrade",
+			"description": "Opens you up even more space for your vacation!"
+		},
+		"computer_upgrade": {
+			"name": "(<from_xp>-<to_xp>) Computer",
+			"description": "More advanced equipment for work!"
+		},
+		"bed_upgrade": {
+			"name": "(<from_xp>-<to_xp>) Bed",
+			"description": "Sleep is one of the most important things!"
+		},
+		"pet_upgrade": {
+			"name": "(<from_xp>-<to_xp>) Pet",
+			"description": "It will never be boring with them!"
+		},
+		"bike_upgrade": {
+			"name": "(<from_xp>-<to_xp>) Bike",
+			"description": "One of the best sports activities. Especially in the summer!"
+		},
+		"car_upgrade": {
+			"name": "(<from_xp>-<to_xp>) Car",
+			"description": "This thing is far from cheap! But it can be proud of!"
+		},
+		"box_upgrade": {
+			"name": "(<from_xp>-<to_xp>) Storage",
+			"description": "Here you can store something valuable or your secrets."
+		},
+		"worker_one": {
+			"name": "Loader (<1> hours)",
+			"description": "Hire a novice with whom you have good connections!"
+		},
+		"worker_two": {
+			"name": "Group of loaders (<1> hours) [<level>LVL+]",
+			"description": "The more work, the more money! Isn't it?"
+		},
+		"worker_three": {
+			"name": "Software developers (<1> hours) [<level>LVL+]",
+			"description": "It's time to start a full-fledged business! Let's create a virus, maybe?"
+		},
+		"worker_four": {
+			"name": "Air advertising (<1> hours) [<level>LVL+]",
+			"description": "Realize your money! Make advertising in the air and make money on it!"
+		},
+		"worker_five": {
+			"name": "Talented people (<1> hours) [<level>LVL+]",
+			"description": "Earn on cryptocurrency! Make people change the cost of Bitcoin!"
+		},
+		"worker_six": {
+			"name": "Moon conquerors (<1> hours) [<level>LVL+]",
+			"description": "Huge team of the best specialists in space! Conquer the moon and sell lands!"
+		},
+		"worker_seven": {
+			"name": "Space travelers (<1> hours) [<level>LVL+]",
+			"description": "You decided to get the most expensive metal in the entire galaxy!"
+		},
+		"worker_eight": {
+			"name": "Conquerors of gas giants (<1> hours) [<level>LVL+]",
+			"description": "You created your own base on a gas giant! No one sees it!"
+		},
+		"booster": "Booster <1>X",
+		"local_booster": {
+			"name": "Local booster",
+			"description": "Get a <1>X booster for <2> hours for yourself only!"
+		},
+		"mega_local_booster": {
+			"name": "MEGA-Local booster"
+		},
+		"worker_booster": {
+			"name": "Worker booster",
+			"description": "Double your profits for the first <1> <server_worker>!"
+		},
+		"mega_worker_booster": {
+			"name": "MEGA-Worker booster <1>X"
+		},
+		"max_worker_booster": {
+			"name": "MAX-Worker booster <1>X"
 		}
 	},
 	"daily": {
@@ -1048,7 +1332,11 @@
 	},
 	"select_menu_pages": {
 		"next": "Next page",
+		"next_page_description": "Go to the next page",
 		"back": "Previous page",
+		"back_page": "Go to the back page",
+		"back_category": "Previous category",
+		"back_category_description": "Back to the category below",
 		"error": "Error. Most likely, there is no one or the limit of 25 members is exceeded."
 	}
 }
